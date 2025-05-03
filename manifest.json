@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Template Chrome Extension",
+  "version": "1.0.0",
+  "action": { "default_popup": "src/popup/index.html" },
+  "content_scripts": [
+    {
+      "js": ["src/content/index.tsx"],
+      "matches": ["https://www.google.com/*"]
+    }
+  ],
+  "background": {
+    "service_worker": "src/background/index.ts"
+  }
+}
